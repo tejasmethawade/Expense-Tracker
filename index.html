@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200&display=swap" rel="stylesheet">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="container-fluid">
+        
+          <div class="top">
+              <!-- <div class="img">
+                <i class="fas fa-user fa-8x logo"></i>
+
+              </div> -->
+              <h1><b>Expense Tracker</b></h1>
+          </div>
+          <br>
+          <!-- <hr> -->
+          <div class="request1  d-lg-none text-center" >
+            <button class=" btn1"><h4><b><i class="fas fa-plus"></i>  Put a Hiring Request</b></h4></button>
+          </div>
+          <div class="row g-lg-1 g-md-0">
+            <!-- left division starts here -->
+            <div class="col-lg-2 col-md-2 d-none d-md-block">
+                <div class="card card-left">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start">
+                            <div  class="nav flex-column nav-pills  me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                              
+                              <button class="nav-link active button bg-info"id="v-pills-skills-tab" data-bs-toggle="pill" data-bs-target="#v-pills-skills" type="button" role="tab" aria-controls="v-pills-skills" aria-selected="true">
+                                <span class="button_icon"><i class="fab fa-stripe-s"></i></span>
+                                <span class="button_text">Home</span>
+                              </button>
+                              <br>
+                              <br>
+                              <br>
+                              <button class="nav-link button bg-success" id="v-pills-acheivements-tab" data-bs-toggle="pill" data-bs-target="#v-pills-acheivements" type="button" role="tab" aria-controls="v-pills-acheivements" aria-selected="false">
+                                <span class="button_icon"><i class="fas fa-trophy mr-1 "></i></span>
+                                <span class="button_text">Analytics</span>
+                              </button>
+                              <br>
+                              <br>
+                              <br>
+                              <button class="nav-link button bg-secondary" id="v-pills-workingstatus-tab" data-bs-toggle="pill" data-bs-target="#v-pills-workingstatus" type="button" role="tab" aria-controls="v-pills-workingstatus" aria-selected="false">
+                                <span class="button_icon"><i class="fas fa-unlock-alt"></i></span>
+                                <span class="button_text">About Us</span>
+                              </button>
+                              <br>
+                              <br>
+                            </div>
+                         
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- right division starts here -->
+            <div class="col-lg-10 col-md-10">
+                <div class="card card-right">
+                    
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-skills" role="tabpanel" aria-labelledby="v-pills-skills-tab">
+                            <h2 class="Heading" style="text-align: center;">Home</h2>
+                          
+                            <div class="main">
+                                
+                              
+                           
+
+                              <div class="left">
+                                <h3 style="text-align:center;">New Entry</h3>
+                                <form id="form">
+                                  <div class="form-control">
+                                    <label for="text">Description</label>
+                                    <input
+                                      type="text"
+                                      id="text"
+                                      onfocus="this.value=''"
+                                      placeholder="Enter text..."
+                                    />
+                                  </div>
+                                  <br>
+                                  <div class="form-control">
+                                    <label for="amount">Amount(+/-) <br /> </label>
+                                    <input
+                                      type="number"
+                                      id="amount"
+                                      onfocus="this.value=''"
+                                      placeholder="Enter value..."
+                                    />
+                                  </div>
+                                  <br>
+                                  <div class="bttn">
+                                    <button style="margin-left: 25px;" class="btn button-17">Add transaction</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <br />
+
+                              
+                              <div class="right">
+                                <h3 style="text-align:center;">History</h3>
+                                <!-- Dynamic unordered list to display the various transactions -->
+                                <div id="list" class="list">
+                                  <div class="item">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                              
+                                
+                            </div>
+                            <p style="text-align: center; color: red;" id="error_msg"></p>
+                            
+                            <div style="float: right; margin-right: 45px;" id="balance"></div>
+
+                        </div>
+    
+                        <div class="tab-pane fade" id="v-pills-acheivements" role="tabpanel" aria-labelledby="v-pills-acheivements-tab">
+                            <h2 class="Heading" style="text-align: center;">Analysis</h2>
+                            <hr>
+                            <h3>This is Analytics Page</h3>
+    
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="v-pills-workingstatus" role="tabpanel" aria-labelledby="v-pills-workingstatus-tab">
+                            <h2 class="Heading" style="text-align: center;">About Us</h2>
+                            <hr>
+                            <div class="about-section">
+                              <h5>Hello Everyone, Welcome to  Expense Tracker App.</h5>
+                              
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the site which is made to make ease of managing expenses of your day to day life. Here You can put your expenses and maintain a regular record of it which would help you to analayse the things.
+                                The analytics section will help contribute to know about it more. Though The site is still under development, with time some more features would be introduced to track your records. 
+                              </p>
+                            </div>
+                            <div style=" text-align: center; color: red;"> <h2>The Team</h2></div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+      </div>
+    <script src="index.js"> </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
